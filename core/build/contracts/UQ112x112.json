@@ -1,15 +1,15 @@
 {
   "contractName": "UQ112x112",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/D/minor/defi/fork-uni-ex/core/contracts/libraries/UQ112x112.sol\":\"UQ112x112\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/minor/defi/fork-uni-ex/core/contracts/libraries/UQ112x112.sol\":{\"keccak256\":\"0xe3bebc29aac628026f0eb6d0dd10d463b0b796fadfa0a1cfad1ae603c7d56539\",\"urls\":[\"bzz-raw://64b8a2f0b01eb74df50a00182874db88b10104deb8aa51f9125ac138cf394b89\",\"dweb:/ipfs/QmUYuj73nr6hxK5xmHdsq7wQjHuLC9iH6c89pcn9pDPhLF\"]}},\"version\":1}",
-  "bytecode": "0x60556023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a723158205706f30f586fb8ad53c84c27beb00c10e7adfb24b40a18032e74906070c9c60364736f6c63430005100032",
-  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a723158205706f30f586fb8ad53c84c27beb00c10e7adfb24b40a18032e74906070c9c60364736f6c63430005100032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/D/minor/defi/actual/opzetten-defi-bedrijf/core/contracts/libraries/UQ112x112.sol\":\"UQ112x112\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/minor/defi/actual/opzetten-defi-bedrijf/core/contracts/libraries/UQ112x112.sol\":{\"keccak256\":\"0xe3bebc29aac628026f0eb6d0dd10d463b0b796fadfa0a1cfad1ae603c7d56539\",\"urls\":[\"bzz-raw://64b8a2f0b01eb74df50a00182874db88b10104deb8aa51f9125ac138cf394b89\",\"dweb:/ipfs/QmUYuj73nr6hxK5xmHdsq7wQjHuLC9iH6c89pcn9pDPhLF\"]}},\"version\":1}",
+  "bytecode": "0x60556023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a72315820768f7ede45be6a1ca6257f3c5b614c4d78ed842ff89e119f701f70912bf7558d64736f6c63430005100032",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a72315820768f7ede45be6a1ca6257f3c5b614c4d78ed842ff89e119f701f70912bf7558d64736f6c63430005100032",
   "sourceMap": "190:406:13:-;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
   "deployedSourceMap": "190:406:13:-;;;;;;;;",
   "source": "pragma solidity =0.5.16;\r\n\r\n// a library for handling binary fixed point numbers (https://en.wikipedia.org/wiki/Q_(number_format))\r\n\r\n// range: [0, 2**112 - 1]\r\n// resolution: 1 / 2**112\r\n\r\nlibrary UQ112x112 {\r\n    uint224 constant Q112 = 2**112;\r\n\r\n    // encode a uint112 as a UQ112x112\r\n    function encode(uint112 y) internal pure returns (uint224 z) {\r\n        z = uint224(y) * Q112; // never overflows\r\n    }\r\n\r\n    // divide a UQ112x112 by a uint112, returning a UQ112x112\r\n    function uqdiv(uint224 x, uint112 y) internal pure returns (uint224 z) {\r\n        z = x / uint224(y);\r\n    }\r\n}\r\n",
-  "sourcePath": "D:\\minor\\defi\\fork-uni-ex\\core\\contracts\\libraries\\UQ112x112.sol",
+  "sourcePath": "D:\\minor\\defi\\actual\\opzetten-defi-bedrijf\\core\\contracts\\libraries\\UQ112x112.sol",
   "ast": {
-    "absolutePath": "/D/minor/defi/fork-uni-ex/core/contracts/libraries/UQ112x112.sol",
+    "absolutePath": "/D/minor/defi/actual/opzetten-defi-bedrijf/core/contracts/libraries/UQ112x112.sol",
     "exportedSymbols": {
       "UQ112x112": [
         2403
@@ -562,7 +562,7 @@
     "src": "0:598:13"
   },
   "legacyAST": {
-    "absolutePath": "/D/minor/defi/fork-uni-ex/core/contracts/libraries/UQ112x112.sol",
+    "absolutePath": "/D/minor/defi/actual/opzetten-defi-bedrijf/core/contracts/libraries/UQ112x112.sol",
     "exportedSymbols": {
       "UQ112x112": [
         2403
@@ -1120,7 +1120,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.2",
-  "updatedAt": "2020-12-09T11:25:01.587Z",
+  "updatedAt": "2021-01-17T15:09:13.239Z",
   "devdoc": {
     "methods": {}
   },
